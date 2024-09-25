@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<AssemblyName>breaker2.unittest</AssemblyName>
+		<PackageId>breaker2.unittest</PackageId>
+		<LangVersion>11</LangVersion>
+		<NoWarn>1701;1702;1591;</NoWarn>
+		<WarningsAsErrors></WarningsAsErrors>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<DefineConstants>SANDBOX;ADDON;DEBUG</DefineConstants>
+		<AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+		<IsTestProject>true</IsTestProject>
+
+	</PropertyGroup>
+
+	<ItemGroup>
+		
+		<None Update="**\*.cs.scss" DependentUpon="%(Filename)" />
+		<Compile Update="**\*.razor.cs" DependentUpon="%(Filename)" />
+		<None Update="**\*.razor.scss" DependentUpon="%(Filename)" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="**/*.razor" />
+	</ItemGroup>
+<ItemGroup>
+	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+	<PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+	<PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+	<PackageReference Include="coverlet.collector" Version="6.0.0" />
+</ItemGroup>
+
+
+	<ItemGroup>
+		<Using Include="Sandbox.Internal.GlobalToolsNamespace" Static="true" />
+		<Using Include="Sandbox.Internal.GlobalGameNamespace" Static="true" />
+	</ItemGroup>
+
+  <PropertyGroup>
+	<OutputPath>B:\SteamLibrary\steamapps\common\sbox/.vs/output/</OutputPath>
+	<DocumentationFile>B:\SteamLibrary\steamapps\common\sbox/.vs/output/breaker2.unittest.xml</DocumentationFile>
+	<RootNamespace>Breaker</RootNamespace>
+	<Nullable>disable</Nullable>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Analyzer Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed\Sandbox.Generator.dll"/>
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.System.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Engine.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Filesystem.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Game.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Reflection.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Tools.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Compiling.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Microsoft.CodeAnalysis.dll" />
+		<Reference Include="B:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Bind.dll" />
+	</ItemGroup>
+
+  <ItemGroup>
+		<ProjectReference Include="b:\steamlibrary\steamapps\common\sbox\addons\libraryproject\Libraries\breaker2\Code\breaker2.csproj" />
+		<ProjectReference Include="b:\steamlibrary\steamapps\common\sbox\addons\libraryproject\Libraries\breaker2\Editor\breaker2.editor.csproj" />
+		<ProjectReference Include="B:\SteamLibrary\steamapps\common\sbox\addons\tools\Code\Base Editor Library.csproj" />
+
+  </ItemGroup>
+
+</Project>

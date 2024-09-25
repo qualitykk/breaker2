@@ -1,0 +1,194 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "actiongraph/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/actiongraph.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/actiongraph.dll": {}
+        }
+      },
+      "Base Editor Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Base Editor Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base Editor Library.dll": {}
+        }
+      },
+      "Base Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Base Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Base Library.dll": {}
+        }
+      },
+      "breaker2/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Base Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/breaker2.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/breaker2.dll": {}
+        }
+      },
+      "hammer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/hammer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/hammer.dll": {}
+        }
+      },
+      "shadergraph/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Base Editor Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/shadergraph.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/shadergraph.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "actiongraph/1.0.0": {
+      "type": "project",
+      "path": "../../../../../editor/ActionGraph/Code/actiongraph.csproj",
+      "msbuildProject": "../../../../../editor/ActionGraph/Code/actiongraph.csproj"
+    },
+    "Base Editor Library/1.0.0": {
+      "type": "project",
+      "path": "../../../../tools/Code/Base Editor Library.csproj",
+      "msbuildProject": "../../../../tools/Code/Base Editor Library.csproj"
+    },
+    "Base Library/1.0.0": {
+      "type": "project",
+      "path": "../../../../base/Code/Base Library.csproj",
+      "msbuildProject": "../../../../base/Code/Base Library.csproj"
+    },
+    "breaker2/1.0.0": {
+      "type": "project",
+      "path": "../Code/breaker2.csproj",
+      "msbuildProject": "../Code/breaker2.csproj"
+    },
+    "hammer/1.0.0": {
+      "type": "project",
+      "path": "../../../../../editor/Hammer/Code/hammer.csproj",
+      "msbuildProject": "../../../../../editor/Hammer/Code/hammer.csproj"
+    },
+    "shadergraph/1.0.0": {
+      "type": "project",
+      "path": "../../../../../editor/ShaderGraph/Code/shadergraph.csproj",
+      "msbuildProject": "../../../../../editor/ShaderGraph/Code/shadergraph.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "Base Editor Library >= 1.0.0",
+      "actiongraph >= 1.0.0",
+      "breaker2 >= 1.0.0",
+      "hammer >= 1.0.0",
+      "shadergraph >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Kilian\\.nuget\\packages\\": {},
+    "C:\\Users\\Kilian\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "b:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\libraryproject\\Libraries\\breaker2\\Editor\\breaker2.editor.csproj",
+      "projectName": "breaker2.editor",
+      "projectPath": "b:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\libraryproject\\Libraries\\breaker2\\Editor\\breaker2.editor.csproj",
+      "packagesPath": "C:\\Users\\Kilian\\.nuget\\packages\\",
+      "outputPath": "b:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\libraryproject\\Libraries\\breaker2\\Editor\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Users\\Kilian\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Kilian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kilian\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "b:\\steamlibrary\\steamapps\\common\\sbox\\addons\\libraryproject\\Libraries\\breaker2\\Code\\breaker2.csproj": {
+              "projectPath": "b:\\steamlibrary\\steamapps\\common\\sbox\\addons\\libraryproject\\Libraries\\breaker2\\Code\\breaker2.csproj"
+            },
+            "B:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj": {
+              "projectPath": "B:\\SteamLibrary\\steamapps\\common\\sbox\\addons\\tools\\Code\\Base Editor Library.csproj"
+            },
+            "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj": {
+              "projectPath": "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ActionGraph\\Code\\actiongraph.csproj"
+            },
+            "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj": {
+              "projectPath": "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\Hammer\\Code\\hammer.csproj"
+            },
+            "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj": {
+              "projectPath": "B:\\SteamLibrary\\steamapps\\common\\sbox\\editor\\ShaderGraph\\Code\\shadergraph.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
