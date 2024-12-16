@@ -8,20 +8,49 @@ namespace Breaker;
 
 public class Config
 {
-	public const string SAVE_FILE = "config.json";
-	static Config()
+	const string SAVE_FILE = "config";
+	[Authority]
+	public static void Load()
 	{
-		Load();
+		Instance = Database.Load<Config>( SAVE_FILE );
+		if(Instance == null)
+		{
+			Instance = new();
+			Save();
+		}
 	}
-	public static Config Load()
+	[Authority]
+	public static void Save()
 	{
-		Instance = DataFile.Load<Config>( SAVE_FILE );
-		return Instance;
+		Database.Save( SAVE_FILE, Instance ?? new() );
 	}
-	public static Config Instance { get; set; }
+	[HostSync] public static Config Instance { get; set; }
 	public bool Enabled { get; set; } = true;
-	public void Save()
+	public LogLevel LogLevel { get; set; } = LogLevel.Warn;
+	public string DefaultUserGroup { get; set; } = "user";
+	public List<string> DisabledModules { get; set; } = new();
+}
+
+[Category("Breaker")]
+[Title("Breaker Configuration")]
+public class ConfigComponent : Component
+{
+	[Property, InlineEditor(Label = false)] public Config LocalConfig { get; set; }
+	protected override void OnEnabled()
 	{
-		DataFile.Save( SAVE_FILE, this );
+		Apply();
+	}
+
+	[Button(icon: "save")]
+	private void Apply()
+	{
+		Config.Instance = LocalConfig;
+		Config.Save();
+	}
+
+	[Button(icon: "file_download")]
+	private void Update()
+	{
+		LocalConfig = Config.Instance;
 	}
 }

@@ -1,0 +1,77 @@
+﻿LogPanel {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 30%;
+    height: 15%;
+    background-color: #80808033;
+    flex-direction: column;
+
+    .header {
+        background-color: #50505077;
+        color: white;
+        height: 3vh;
+
+        .title {
+            width: 80%;
+            font-size: 24px;
+            font-family: Roboto;
+            text-align: center;
+            align-items: center;
+        }
+
+        icon {
+            font-size: 28px;
+        }
+
+        .controls {
+            width: 20%;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    &.collapsed {
+        height: 3vh;
+    }
+
+    &.hidden {
+        display: none;
+    }
+
+    &.cursor {
+        pointer-events: all;
+    }
+
+    icon {
+        font-family: "Material Icons";
+    }
+
+    .content {
+        flex-direction: column;
+        overflow-y: scroll;
+        gap: 5px;
+        margin: 1%;
+
+        .entry {
+            background-color: #20202066;
+            color: #fff;
+            font-family: Roboto;
+            min-height: 3vh;
+            align-items: center;
+
+            &.error {
+                background-color: #80202088;
+            }
+
+            .level {
+                width: 10%;
+                text-align: center;
+            }
+
+            .message {
+                width: 85%;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+﻿@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Breaker
+
+
+
+<root class="window">
+    @if(collapsed)
+    {
+        <div class="header">
+            <label class="title">Breaker Admin Log</label>
+            <div class="controls">
+                <icon onclick=@ToggleCollapse>expand_less</icon>
+                <icon onclick=@Toggle>close</icon>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="header">
+            <label class="title">Breaker Admin Log</label>
+            <div class="controls">
+                <icon onclick=@ToggleCollapse>expand_more</icon>
+                <icon onclick=@Toggle>close</icon>
+            </div>
+        </div>
+        <div class="content">
+            @foreach(var entry in lines)
+            {
+                <div class="entry @PanelClass.If("error", entry.Level.IsError())">
+                    <label class="level">@entry.Level</label>
+                    <label class="message">@entry.Message</label>
+                </div>
+            }
+        </div>
+    }
+</root>
